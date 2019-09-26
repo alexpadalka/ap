@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.epam.jmp.lesson02_jvm.task01.CustomClassLoader;
 import com.epam.jmp.lesson03_gc.task05.Helper;
 
 public class Main {
@@ -14,7 +13,7 @@ public class Main {
 //    executeTask02();
 //    executeTask03();
 //    executeTask04();
-    executeTask05();
+//    executeTask05();
   }
 
   private static void executeTask01() {

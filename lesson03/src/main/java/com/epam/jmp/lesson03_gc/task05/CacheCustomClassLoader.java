@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.epam.jmp.lesson02_jvm.task01.CustomClassLoader;
 import com.epam.jmp.util.JMPUtils;
 
 public class CacheCustomClassLoader extends CustomClassLoader {
