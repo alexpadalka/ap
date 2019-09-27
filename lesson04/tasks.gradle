@@ -11,3 +11,27 @@ task momsFriendsSonsSalary {
         println Utility.getSalary(1000).getAmount()
     }
 }
+
+task printSome1 {
+    doLast {
+        println 'Top level print statement something 1'
+    }
+}
+
+task printSome2 {
+    doLast {
+        println 'Top level print statement something 2'
+    }
+}
+
+task printSome3 {
+    doLast {
+        println 'Top level print statement something 3'
+    }
+}
+
+task printSome4 {
+    doLast {
+        println 'Top level print statement something 4'
+    }
+}
