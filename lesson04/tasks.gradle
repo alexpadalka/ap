@@ -35,3 +35,49 @@ task printSome4 {
         println 'Top level print statement something 4'
     }
 }
+
+task startGradle {
+    doLast {
+        println "The Gradle is building"
+    }
+}
+startGradle.configure {
+    doLast {
+        println 'Inside configure block step 1'
+    }
+}
+startGradle.configure {
+    doLast {
+        println 'Inside configure block step 2'
+    }
+}
+
+task myDate {
+    dependsOn startGradle, printSome1, printSome2, printSome3, printSome4
+    doLast {
+        println new Date()
+    }
+}
+myDate.configure {
+    doLast {
+        println 'Task 03'
+        println 'Inside configure block'
+    }
+}
+
+task showDeps {
+    doLast {
+        println "All Dependencies:"
+        allprojects.each { p ->
+            println "$p.name"
+            println "|"
+            p.configurations.all.findAll { !it.allDependencies.empty }.each { c ->
+                println "|- ${c.name}"
+                c.allDependencies.each { dep ->
+                    println "|  |- $dep.group:$dep.name:$dep.version"
+                }
+                println "|"
+            }
+        }
+    }
+}

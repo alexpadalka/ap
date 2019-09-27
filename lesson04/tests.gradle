@@ -1,0 +1,62 @@
+class NotificationTestListener implements TestListener {
+    final Project project
+
+    NotificationTestListener(Project project) {
+        this.project = project
+    }
+
+    @Override
+    void beforeSuite(TestDescriptor testDescriptor) {
+        printing('Suite started ' + suite.getName())
+    }
+
+    @Override
+    void afterSuite(TestDescriptor testDescriptor, TestResult testResult) {
+        printing('Suite finished ' + suite.getName())
+    }
+
+    @Override
+    void beforeTest(TestDescriptor testDescriptor) {
+        printing('Test started ' + suite.getName())
+    }
+
+    @Override
+    void afterTest(TestDescriptor testDescriptor, TestResult testResult) {
+        printing('Test finished ' + suite.getName() + ' with result ' + testResult.getResultType())
+    }
+
+    private printing(String message) {
+        println '\t-> ' + message
+    }
+}
+
+test {
+    useJUnit()
+
+    forkEvery = 1
+    maxParallelForks = 4
+
+    testLogging {
+        // set options for log level LIFECYCLE
+        events "failed"
+        exceptionFormat "short"
+        // set options for log level DEBUG
+        debug {
+            events "started", "skipped", "failed"
+            exceptionFormat "full"
+        }
+        // remove standard output/error logging from --info builds
+        // by assigning only 'failed' and 'skipped' events
+        info.events = ["failed", "skipped"]
+    }
+
+    addTestListener(new NotificationTestListener(project))
+}
+
+task testReport(type: TestReport) {
+    destinationDir = file("$buildDir/test-reports")
+    testResultDirs = files("$buildDir/test-results")
+    reportOn(test)
+}
+
+test.finalizedBy(testReport)
