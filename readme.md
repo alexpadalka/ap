@@ -4,7 +4,7 @@
 
 [3. JVM Basics + GC Algorithms](lesson03/gc.md)
 
-[4. Lambdas & Streams](lesson04/maven_gradle.md)
+[4. Infrastructure Build Java application with Maven and Gradle](lesson04/maven_gradle.md)
 
 []()
 
