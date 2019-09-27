@@ -1,0 +1,13 @@
+import com.epam.jmp.Utility;
+
+task mySalary {
+    doLast {
+        println Utility.getSalary().getAmount()
+    }
+}
+
+task momsFriendsSonsSalary {
+    doLast {
+        println Utility.getSalary(1000).getAmount()
+    }
+}
