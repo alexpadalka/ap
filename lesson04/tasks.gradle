@@ -68,15 +68,15 @@ myDate.configure {
 task showDeps {
     doLast {
         println "All Dependencies:"
-        allprojects.each { p ->
-            println "$p.name"
-            println "|"
-            p.configurations.all.findAll { !it.allDependencies.empty }.each { c ->
-                println "|- ${c.name}"
-                c.allDependencies.each { dep ->
-                    println "|  |- $dep.group:$dep.name:$dep.version"
+        allprojects.each { project ->
+            println "$project.name"
+            println " |"
+            project.configurations.all.findAll { !it.allDependencies.empty }.each { config ->
+                println " |- ${config.name}"
+                config.allDependencies.each { depepdency ->
+                    println " |   |- $depepdency.group:$depepdency.name:$depepdency.version"
                 }
-                println "|"
+                println " |"
             }
         }
     }
