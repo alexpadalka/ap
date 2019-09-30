@@ -43,6 +43,17 @@ allprojects {
             }
         }
     }
+
+    tasks.withType(JavaCompile) {
+        options.incremental = true
+    }
+
+    tasks.withType(Test) {
+        maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+        forkEvery = 100
+        reports.html.enabled = false
+        reports.junitXml.enabled = false
+    }
 }
 
 dependencies {
