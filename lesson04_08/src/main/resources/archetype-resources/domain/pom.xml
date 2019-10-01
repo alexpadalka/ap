@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <artifactId>${rootArtifactId}</artifactId>
+    <groupId>${groupId}</groupId>
+    <version>${version}</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>${artifactId}</artifactId>
+  <version>${version}</version>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>resources</artifactId>
+      <version>1.0</version>
+      <classifier>resources</classifier>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>${project.build.directory}/generated-resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack-shared-resources</id>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.basedir}/src/main/resources</outputDirectory>
+              <includeArtifactIds>resources</includeArtifactIds>
+              <includeGroupIds>${project.groupId}</includeGroupIds>
+              <excludeTransitive>true</excludeTransitive>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>com.epam.jmp</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>web</artifactId>
+  <version>1.0</version>
+  <properties>
+    <tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
+  </properties>
+  <packaging>war</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>domain</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>service</artifactId>
+      <version>1.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>resources</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>${project.build.directory}/generated-resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${maven-war-plugin.version}</version>
+      </plugin>
+
+      <!--<plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>${tomcat7-maven-plugin.version}</version>
+        <configuration>
+          <url>http://localhost:8080/manager/text</url>
+          <server>TomcatServer</server> &lt;!&ndash; server name &ndash;&gt;
+          <path>/mkyongWebApp</path> &lt;!&ndash; application path &ndash;&gt;
+        </configuration>
+      </plugin>-->
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack-shared-resources</id>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <phase>generate-resources</phase>
+            <configuration>
+              <outputDirectory>${project.basedir}/src/main/resources</outputDirectory>
+              <includeArtifactIds>resources</includeArtifactIds>
+              <includeGroupIds>${project.groupId}</includeGroupIds>
+              <excludeTransitive>true</excludeTransitive>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
