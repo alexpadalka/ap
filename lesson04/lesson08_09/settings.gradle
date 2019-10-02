@@ -1,0 +1,10 @@
+include 'ejbjar'
+include 'ear'
+
+rootProject.name = 'lesson08_09'
+
+include(':domain')
+include(':repos')
+include(':services')
+include(':web')
+include(':ear')
