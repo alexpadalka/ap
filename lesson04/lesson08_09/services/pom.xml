@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <artifactId>lesson08_09</artifactId>
+    <groupId>com.epam.jmp</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>services</artifactId>
+  <version>1.0</version>
+  <packaging>ejb</packaging>
+
+  <properties>
+    <domain.version>1.0</domain.version>
+    <repos.version>1.0</repos.version>
+    <maven-ejb-plugin.version>3.0.1</maven-ejb-plugin.version>
+    <maven-ejb-plugin.ejbVersion>3.0</maven-ejb-plugin.ejbVersion>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>domain</artifactId>
+      <version>${domain.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.epam.jmp</groupId>
+      <artifactId>repos</artifactId>
+      <version>${repos.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <version>${maven-ejb-plugin.version}</version>
+        <configuration>
+          <ejbVersion>${maven-ejb-plugin.ejbVersion}</ejbVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

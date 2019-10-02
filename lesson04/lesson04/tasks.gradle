@@ -1,0 +1,83 @@
+import com.epam.jmp.Utility;
+
+task mySalary {
+    doLast {
+        println Utility.getSalary().getAmount()
+    }
+}
+
+task momsFriendsSonsSalary {
+    doLast {
+        println Utility.getSalary(1000).getAmount()
+    }
+}
+
+task printSome1 {
+    doLast {
+        println 'Top level print statement something 1'
+    }
+}
+
+task printSome2 {
+    doLast {
+        println 'Top level print statement something 2'
+    }
+}
+
+task printSome3 {
+    doLast {
+        println 'Top level print statement something 3'
+    }
+}
+
+task printSome4 {
+    doLast {
+        println 'Top level print statement something 4'
+    }
+}
+
+task startGradle {
+    doLast {
+        println "The Gradle is building"
+    }
+}
+startGradle.configure {
+    doLast {
+        println 'Inside configure block step 1'
+    }
+}
+startGradle.configure {
+    doLast {
+        println 'Inside configure block step 2'
+    }
+}
+
+task myDate {
+    dependsOn startGradle, printSome1, printSome2, printSome3, printSome4
+    doLast {
+        println new Date()
+    }
+}
+myDate.configure {
+    doLast {
+        println 'Task 03'
+        println 'Inside configure block'
+    }
+}
+
+task showDeps {
+    doLast {
+        println "All Dependencies:"
+        allprojects.each { project ->
+            println "$project.name"
+            println " |"
+            project.configurations.all.findAll { !it.allDependencies.empty }.each { config ->
+                println " |- ${config.name}"
+                config.allDependencies.each { depepdency ->
+                    println " |   |- $depepdency.group:$depepdency.name:$depepdency.version"
+                }
+                println " |"
+            }
+        }
+    }
+}

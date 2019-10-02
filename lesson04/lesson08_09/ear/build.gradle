@@ -1,0 +1,8 @@
+plugins {
+    id 'ear'
+}
+
+dependencies {
+    deploy project(':services')
+    deploy project(':web')
+}

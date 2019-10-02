@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+apply from: 'tasks.gradle'
+apply from: 'tests.gradle'
+
+group 'com.epam'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+configurations {
+    myConfig
+//    myConfig.transitive = false
+}
+
+dependencies {
+    myConfig 'log4j:log4j:1.2.17'
+    myConfig 'org.apache.httpcomponents:httpclient:4.5.10'
+    compile 'org.projectlombok:lombok:1.18.10'
+    compile configurations.myConfig
+
+    testCompile 'junit:junit:4.12'
+}
+
+task copyDeps(type: Copy) {
+//    def excludeConfigs = ['testRuntimeOnly', ]
+//    from configurations.myConfig
+    from configurations.all
+            .findAll{!it.name.startsWith('test')}
+            .findAll{!it.name.startsWith('runtime')}
+            .findAll{!it.name.startsWith('impl')}
+            .findAll{!it.name.startsWith('api')}
+            .each {c -> c}
+    into "$buildDir/deps"
+}

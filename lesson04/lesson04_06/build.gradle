@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.epam.jmp'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+subprojects {
+    version = '1.0'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
+
+    mainClassName = 'com.epam.jmp.main.Main'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.12'
+    }
+
+    jar {
+        manifest {
+            attributes 'Main-Class': 'com.epam.jmp.main.Main'
+        }
+    }
+
+    task runJar(dependsOn:jar) {
+        doLast {
+            javaexec {
+                main = "-jar";
+                args jar.archivePath
+            }
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.incremental = true
+    }
+
+    tasks.withType(Test) {
+        maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+        forkEvery = 100
+        reports.html.enabled = false
+        reports.junitXml.enabled = false
+    }
+}
+
+dependencies {
+    compile project(':main')
+
+    testCompile 'junit:junit:4.12'
+}
