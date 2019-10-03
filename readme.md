@@ -6,7 +6,7 @@
 
 [4. Infrastructure Build Java application with Maven and Gradle](lesson04/maven_gradle.md)
 
-[]()
+[5. Infrastructure Continuous Integration Concepts (Jenkins)](lesson06/ci.md)
 
 []()
 
