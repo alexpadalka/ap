@@ -42,5 +42,9 @@ ui/
 ui/*
 /ui/
 /ui/*
+work/
+work/*
+/work/
+/work/*
 gradlew
 gradlew.bat
