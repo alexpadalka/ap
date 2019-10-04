@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Group-Id: io.jenkins.plugins
+Short-Name: custom_plugin
+Long-Name: TODO Plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 1.0-SNAPSHOT (private-10/04/2019 14:14-Aliaksandr_Pada
+ lka)
+Hudson-Version: 2.164.1
+Jenkins-Version: 2.164.1
+Plugin-Developers: 
+Support-Dynamic-Loading: true
+Libraries: c:\Projects\jmp\lesson05\custom_plugin\src\main\resources,c
+ :\Projects\jmp\lesson05\custom_plugin\target\classes
+Resource-Path: c:\Projects\jmp\lesson05\custom_plugin\src\main\webapp
+
