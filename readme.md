@@ -8,7 +8,7 @@
 
 [5. Infrastructure Continuous Integration Concepts (Jenkins)](lesson05/ci.md)
 
-[]()
+[6. Testing: JUnit 4 and 5, jmock, TDD, BDD](lesson06/junit.md)
 
 []()
 
