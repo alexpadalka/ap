@@ -1,10 +1,10 @@
-package com.epam.jmp.lesson03_gc;
+package ap.lesson03_gc;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.epam.jmp.lesson03_gc.task05.Helper;
+import ap.lesson03_gc.task05.Helper;
 
 public class Main {
 

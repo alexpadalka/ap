@@ -1,4 +1,4 @@
-package com.epam.jmp.lesson03_gc.task05;
+package ap.lesson03_gc.task05;
 
 public class TestClass {
 

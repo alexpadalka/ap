@@ -1,4 +1,4 @@
-package com.epam.jmp.lesson03_gc.task05;
+package ap.lesson03_gc.task05;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.epam.jmp.util.JMPUtils;
+import ap.util.JMPUtils;
 
 public class CacheCustomClassLoader extends CustomClassLoader {
 
