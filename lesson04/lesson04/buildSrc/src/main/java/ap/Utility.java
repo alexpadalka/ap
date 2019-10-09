@@ -1,6 +1,6 @@
-package com.epam.jmp;
+package ap;
 
-import com.epam.jmp.task02.Salary;
+import ap.task02.Salary;
 
 public class Utility {
 

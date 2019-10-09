@@ -1,4 +1,4 @@
-package com.epam.jmp;
+package ap;
 
 public class Main {
 }

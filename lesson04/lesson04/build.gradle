@@ -5,7 +5,7 @@ plugins {
 apply from: 'tasks.gradle'
 apply from: 'tests.gradle'
 
-group 'com.epam'
+group 'ap'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

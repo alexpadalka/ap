@@ -1,4 +1,4 @@
-import com.epam.jmp.Utility;
+import ap.Utility;
 
 task mySalary {
     doLast {

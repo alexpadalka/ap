@@ -1,4 +1,4 @@
-package com.epam.jmp.task02;
+package ap.task02;
 
 public class Salary {
 
