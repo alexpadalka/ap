@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group 'com.epam.jmp'
+group 'ap'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -17,7 +17,7 @@ allprojects {
     apply plugin: 'java'
     apply plugin: 'application'
 
-    mainClassName = 'com.epam.jmp.main.Main'
+    mainClassName = 'ap.main.Main'
 
     repositories {
         mavenLocal()
@@ -31,7 +31,7 @@ allprojects {
 
     jar {
         manifest {
-            attributes 'Main-Class': 'com.epam.jmp.main.Main'
+            attributes 'Main-Class': 'ap.main.Main'
         }
     }
 

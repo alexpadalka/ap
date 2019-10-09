@@ -1,4 +1,4 @@
-group 'com.epam.jmp'
+group 'ap'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
