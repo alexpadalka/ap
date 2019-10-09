@@ -1,4 +1,4 @@
-package com.epam.jmp.task01;
+package ap.task01;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -12,6 +12,7 @@ import java.util.Random;
 import org.junit.Ignore;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -115,7 +116,7 @@ public class TestUtil {
   @DisplayName("Test compute factorial without exceed timeout")
   @Test()
   public void testComputeFactorial_whenComputeFactorialWithoutExceedTimeout_returnFactorial() {
-    assertTimeout(Duration.ofMillis(1500), () -> util.computeFactorial(1001L));
+    Assertions.assertTimeout(Duration.ofMillis(1500), () -> util.computeFactorial(1001L));
   }
 
   @DisplayName("Ignored test")

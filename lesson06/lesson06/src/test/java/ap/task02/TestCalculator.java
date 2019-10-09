@@ -1,4 +1,4 @@
-package com.epam.jmp.task02;
+package ap.task02;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -9,6 +9,7 @@ import java.time.Duration;
 
 import org.junit.Rule;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.Timeout;
@@ -91,7 +92,7 @@ public class TestCalculator {
 
   @Test
   public void testIsPrime() {
-    assertTimeout(Duration.ofMillis(500), () -> calculator.isPrime(1001));
+    Assertions.assertTimeout(Duration.ofMillis(500), () -> calculator.isPrime(1001));
   }
 
   @Test

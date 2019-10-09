@@ -1,4 +1,4 @@
-package com.epam.jmp.task02;
+package ap.task02;
 
 import java.util.HashMap;
 import java.util.Map;
