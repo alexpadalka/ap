@@ -1,4 +1,4 @@
-package com.epam.jmp.model;
+package ap.model;
 
 public class Cat extends Pet {
 

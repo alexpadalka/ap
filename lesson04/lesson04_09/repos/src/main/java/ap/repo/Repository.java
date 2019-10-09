@@ -1,6 +1,6 @@
-package com.epam.jmp.repo;
+package ap.repo;
 
-import com.epam.jmp.model.Animal;
+import ap.model.Animal;
 
 public interface Repository {
   Animal get(Integer id);

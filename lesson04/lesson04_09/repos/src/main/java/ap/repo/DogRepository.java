@@ -1,6 +1,6 @@
-package com.epam.jmp.repo;
+package ap.repo;
 
-import com.epam.jmp.model.Dog;
+import ap.model.Dog;
 
 public class DogRepository extends AbstractRepository {
 

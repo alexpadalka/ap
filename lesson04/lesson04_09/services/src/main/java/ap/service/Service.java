@@ -1,6 +1,6 @@
-package com.epam.jmp.service;
+package ap.service;
 
-import com.epam.jmp.model.Animal;
+import ap.model.Animal;
 
 public interface Service {
   Animal get(Integer id);

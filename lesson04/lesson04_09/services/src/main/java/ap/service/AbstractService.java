@@ -1,7 +1,7 @@
-package com.epam.jmp.service;
+package ap.service;
 
-import com.epam.jmp.model.Animal;
-import com.epam.jmp.repo.Repository;
+import ap.model.Animal;
+import ap.repo.Repository;
 
 public abstract class AbstractService implements Service {
 

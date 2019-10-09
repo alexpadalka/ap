@@ -1,7 +1,7 @@
-package com.epam.jmp.service;
+package ap.service;
 
-import com.epam.jmp.model.Dog;
-import com.epam.jmp.repo.DogRepository;
+import ap.model.Dog;
+import ap.repo.DogRepository;
 
 public class DogService extends AbstractService {
 

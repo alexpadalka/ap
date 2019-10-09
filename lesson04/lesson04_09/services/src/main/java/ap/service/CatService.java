@@ -1,7 +1,7 @@
-package com.epam.jmp.service;
+package ap.service;
 
-import com.epam.jmp.model.Cat;
-import com.epam.jmp.repo.CatRepository;
+import ap.model.Cat;
+import ap.repo.CatRepository;
 
 public class CatService extends AbstractService {
 

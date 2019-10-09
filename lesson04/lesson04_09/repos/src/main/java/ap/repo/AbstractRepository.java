@@ -1,10 +1,10 @@
-package com.epam.jmp.repo;
+package ap.repo;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.epam.jmp.model.Animal;
-import com.epam.jmp.util.IdUtil;
+import ap.model.Animal;
+import ap.util.IdUtil;
 
 public abstract class AbstractRepository implements Repository {
 

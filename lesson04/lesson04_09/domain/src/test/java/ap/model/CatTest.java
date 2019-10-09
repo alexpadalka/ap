@@ -1,4 +1,4 @@
-package com.epam.jmp.model;
+package ap.model;
 
 import static org.junit.Assert.assertEquals;
 

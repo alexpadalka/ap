@@ -1,6 +1,6 @@
-package com.epam.jmp.repo;
+package ap.repo;
 
-import com.epam.jmp.model.Cat;
+import ap.model.Cat;
 
 public class CatRepository extends AbstractRepository {
 
