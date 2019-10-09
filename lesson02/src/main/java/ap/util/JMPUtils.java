@@ -1,4 +1,4 @@
-package com.epam.jmp.util;
+package ap.util;
 
 import org.apache.log4j.Logger;
 

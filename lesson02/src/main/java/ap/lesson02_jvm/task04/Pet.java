@@ -1,4 +1,4 @@
-package com.epam.jmp.lesson02_jvm.task04;
+package ap.lesson02_jvm.task04;
 
 public abstract class Pet implements Animal {
 

@@ -1,13 +1,13 @@
-package com.epam.jmp.lesson02_jvm;
+package ap.lesson02_jvm;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.epam.jmp.lesson02_jvm.task01.CustomClassLoader;
-import com.epam.jmp.lesson02_jvm.task01.Utility;
-import com.epam.jmp.lesson02_jvm.task04.Animal;
+import ap.lesson02_jvm.task01.CustomClassLoader;
+import ap.lesson02_jvm.task01.Utility;
+import ap.lesson02_jvm.task04.Animal;
 
 public class Main {
 

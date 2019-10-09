@@ -1,4 +1,4 @@
-package com.epam.jmp.lesson02_jvm.task01;
+package ap.lesson02_jvm.task01;
 
 import java.util.HashMap;
 import java.util.Map;
