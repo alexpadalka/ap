@@ -2,7 +2,7 @@ package ap.lesson03_gc.task05;
 
 public class Helper {
 
-  private static final String CLASS_NAME = "com.epam.jmp.lesson03_gc.task05.TestClass";
+  private static final String CLASS_NAME = "ap.lesson03_gc.task05.TestClass";
 
   private CacheCustomClassLoader classLoader;
 

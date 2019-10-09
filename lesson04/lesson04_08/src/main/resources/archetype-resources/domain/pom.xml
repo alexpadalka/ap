@@ -15,7 +15,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.epam.jmp</groupId>
+      <groupId>ap</groupId>
       <artifactId>resources</artifactId>
       <version>1.0</version>
       <classifier>resources</classifier>

@@ -64,13 +64,13 @@ public class Main {
     Animal animal = null;
 
     try {
-      aClass = classLoader.findClass("com.epam.jmp.lesson02_jvm.task04.Cat");
+      aClass = classLoader.findClass("ap.lesson02_jvm.task04.Cat");
       method = aClass.getMethod("setName", String.class);
       animal = (Animal) aClass.newInstance();
       method.invoke(animal, "Grey cardinal");
       animals.add(animal);
 
-      aClass = classLoader.findClass("com.epam.jmp.lesson02_jvm.task04.Dog");
+      aClass = classLoader.findClass("ap.lesson02_jvm.task04.Dog");
       method = aClass.getMethod("setName", String.class);
       animal = (Animal) aClass.newInstance();
       method.invoke(animal, "Max");
@@ -93,13 +93,13 @@ public class Main {
     Animal animal = null;
 
     try {
-      aClass = classLoader.findClass("com.epam.jmp.lesson02_jvm.task04.Cat");
+      aClass = classLoader.findClass("ap.lesson02_jvm.task04.Cat");
       method = aClass.getMethod("setName", String.class);
       animal = (Animal) aClass.newInstance();
       method.invoke(animal, "Grey cardinal");
       animals.add(animal);
 
-      aClass = classLoader.findClass("com.epam.jmp.lesson02_jvm.task04.Dog");
+      aClass = classLoader.findClass("ap.lesson02_jvm.task04.Dog");
       method = aClass.getMethod("setName", String.class);
       animal = (Animal) aClass.newInstance();
       method.invoke(animal, "Max");

@@ -18,21 +18,21 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.epam.jmp</groupId>
+      <groupId>ap</groupId>
       <artifactId>domain</artifactId>
       <version>1.0</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.epam.jmp</groupId>
+      <groupId>ap</groupId>
       <artifactId>service</artifactId>
       <version>1.0</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.epam.jmp</groupId>
+      <groupId>ap</groupId>
       <artifactId>resources</artifactId>
       <version>1.0</version>
       <scope>provided</scope>

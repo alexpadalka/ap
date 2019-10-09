@@ -28,7 +28,7 @@ public class Utility {
       CustomClassLoader classLoader = new CustomClassLoader();
       Class<?> aClass = null;
       try {
-        aClass = classLoader.findClass("com.epam.jmp.lesson02_jvm.task01.CustomMemoryLeak");
+        aClass = classLoader.findClass("ap.lesson02_jvm.task01.CustomMemoryLeak");
         list.add(aClass);
       } catch (ClassNotFoundException e) {
         e.printStackTrace();
