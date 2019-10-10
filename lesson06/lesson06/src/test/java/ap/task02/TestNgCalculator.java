@@ -85,7 +85,7 @@ public class TestNgCalculator {
     Assert.assertEquals(calculator.power(2L, 2L), 4.0);
   }
 
-  @Test(timeOut = 1000)
+  @Test(timeOut = 1001)
   public void testIsPrimeNegative() {
     calculator.isPrime(-1001);
   }
