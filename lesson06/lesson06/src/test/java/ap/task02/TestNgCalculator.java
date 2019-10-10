@@ -85,6 +85,16 @@ public class TestNgCalculator {
     Assert.assertEquals(calculator.power(2L, 2L), 4.0);
   }
 
+  @Test(timeOut = 1000)
+  public void testIsPrimeNegative() {
+    calculator.isPrime(-1001);
+  }
+
+  @Test(timeOut = 500)
+  public void testIsPrime() {
+    calculator.isPrime(1001);
+  }
+
   @Test
   public void testFibonacci() {
     Assert.assertEquals(calculator.fibonacci(3), 2L);
