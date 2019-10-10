@@ -27,13 +27,14 @@ public abstract class AbstractRepository implements Repository {
   }
 
   @Override
-  public void saveOrUpdate(Animal animal) {
+  public Animal saveOrUpdate(Animal animal) {
     Integer id = animal.getId();
     if (id == null) {
       id = idUtil.getFirstAvailableId();
       animal.setId(id);
     }
     storage.put(id, animal);
+    return animal;
   }
 
   @Override
