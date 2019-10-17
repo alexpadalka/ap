@@ -10,7 +10,7 @@
 
 [6. Testing: JUnit 4 and 5, jmock, TDD, BDD](lesson06/junit.md)
 
-[]()
+[7. Multithreading: Classic Model and Concurrency](lesson07/concurrency.md)
 
 []()
 
