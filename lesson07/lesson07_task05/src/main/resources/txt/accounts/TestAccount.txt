@@ -1,0 +1,4 @@
+Test Account
+USD
+USD 10.5 1.0
+EUR 5.0 0.77

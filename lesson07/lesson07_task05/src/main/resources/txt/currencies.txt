@@ -1,0 +1,6 @@
+USD-840-United States Dollar
+EUR-978-Euro Member Countries
+GBP-826-United Kingdom Pound
+UAH-980-Ukrainian Hryvnia
+RUB-643-Russian Ruble
+BYN-933-Belorussian Ruble
