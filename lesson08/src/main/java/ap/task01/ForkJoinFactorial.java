@@ -44,6 +44,6 @@ public class ForkJoinFactorial extends RecursiveTask<BigInteger> {
 
   public static BigInteger calculate(long num) {
     ForkJoinFactorial task = new ForkJoinFactorial(num);
-    return new ForkJoinPool().invoke(task);
+    return (new ForkJoinPool()).invoke(task);
   }
 }
