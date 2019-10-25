@@ -12,7 +12,7 @@
 
 [7. Multithreading: Classic Model and Concurrency](lesson07/concurrency.md)
 
-[]()
+[8. FJK and Async Java](lesson08/fjk_async.md)
 
 []()
 
